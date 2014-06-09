@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.CodeFirst", "MyCompany.CodeFirst\MyCompany.CodeFirst.csproj", "{EA6A503F-9F5E-4A38-9656-55FA7A908CEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompanyCommandPrompt", "MyCompanyCommandPrompt\MyCompanyCommandPrompt.csproj", "{86CEAF9E-4D62-4C01-A403-735C974D1D66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA6A503F-9F5E-4A38-9656-55FA7A908CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6A503F-9F5E-4A38-9656-55FA7A908CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6A503F-9F5E-4A38-9656-55FA7A908CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6A503F-9F5E-4A38-9656-55FA7A908CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CEAF9E-4D62-4C01-A403-735C974D1D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CEAF9E-4D62-4C01-A403-735C974D1D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CEAF9E-4D62-4C01-A403-735C974D1D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CEAF9E-4D62-4C01-A403-735C974D1D66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.ModelFirst", "MyCompany.ModelFirst\MyCompany.ModelFirst.csproj", "{62F16417-50BE-42B7-AE56-21DD664F9591}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.NorthwindSystem", "MyCompany.NorthwindSystem\MyCompany.NorthwindSystem.csproj", "{1CDE9ECB-3580-431E-AC8C-0DDAFBEF6AC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62F16417-50BE-42B7-AE56-21DD664F9591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F16417-50BE-42B7-AE56-21DD664F9591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F16417-50BE-42B7-AE56-21DD664F9591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F16417-50BE-42B7-AE56-21DD664F9591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CDE9ECB-3580-431E-AC8C-0DDAFBEF6AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CDE9ECB-3580-431E-AC8C-0DDAFBEF6AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CDE9ECB-3580-431E-AC8C-0DDAFBEF6AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CDE9ECB-3580-431E-AC8C-0DDAFBEF6AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
