@@ -14,6 +14,24 @@ namespace NorthwindSystem.BLL
     [DataObject]
     public class NorthwindManager
     {
+        public int AddShipper(Shipper info)
+        {
+            using (var context = new NWContext())
+            {
+                context.Shippers.Add(info);
+                context.SaveChanges();
+                return info.ShipperID;
+            }
+        }
+
+        public Shipper GetShipper(int shipperId)
+        {
+            using (var context = new NWContext())
+            {
+                return context.Shippers.Find(shipperId);
+            }
+        }
+
         public List<Employee> GetEmployees()
         {
             using (var context = new NWContext())
