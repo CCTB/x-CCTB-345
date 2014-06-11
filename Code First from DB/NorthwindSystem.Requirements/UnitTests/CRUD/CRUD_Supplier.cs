@@ -34,25 +34,65 @@ namespace NorthwindSystem.Requirements.UnitTests.CRUD
             Assert.Equal(expected.Phone, actual.Phone);
             Assert.Equal(actualId, actual.ShipperID);
         }
-        
-        [Fact]
-        [AutoRollback]
-        public void Should_Update()
+
+        private static IEnumerable<object[]> _CurrentShippers = null;
+        public static IEnumerable<object[]> CurrentShippers
         {
-            // Arrange
-            // Act
-            // Assert
-            throw new NotImplementedException();
+            get
+            {
+                if (_CurrentShippers == null)
+                {
+                    var controller = new NorthwindManager();
+                    var temp = new List<object[]>();
+                    foreach (Shipper shipper in controller.ListShippers())
+                    {
+                        temp.Add(new object[] {shipper});
+                    }
+                    _CurrentShippers = temp;
+                }
+                return _CurrentShippers;
+            }
         }
 
-        [Fact]
+        [Theory]
+        [PropertyData("CurrentShippers")]
         [AutoRollback]
-        public void Should_Delete()
+        public void Should_Update(object existing)
         {
             // Arrange
+            Shipper expected = existing as Shipper;
+            var sut = new NorthwindManager();
+            expected.Phone = "780.999.9999";
+
             // Act
+            sut.UpdateShipper(expected);
+
             // Assert
-            throw new NotImplementedException();
+            var actual = sut.GetShipper(expected.ShipperID);
+            Assert.Equal(expected.CompanyName, actual.CompanyName);
+            Assert.Equal(expected.Phone, actual.Phone);
+            Assert.Equal(expected.ShipperID, actual.ShipperID);
+        }
+
+        [Theory]
+        [PropertyData("CurrentShippers")]
+        [AutoRollback]
+        public void Should_Delete(object existing)
+        {
+            // TODO: x) Fix test - should only be able to delete a Shipper that is NOT being used - need to add, then delete
+            // Arrange
+            Shipper expected = existing as Shipper;
+            var sut = new NorthwindManager();
+            expected.Phone = "780.999.9999";
+
+            // Act
+            sut.DeleteShipper(expected);
+
+            // Assert
+            var actual = sut.GetShipper(expected.ShipperID);
+            Assert.Equal(expected.CompanyName, actual.CompanyName);
+            Assert.Equal(expected.Phone, actual.Phone);
+            Assert.Equal(expected.ShipperID, actual.ShipperID);
         }
     }
 }

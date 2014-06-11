@@ -18,6 +18,7 @@ namespace NorthwindSystem.Requirements
          * http://xunit.codeplex.com/wikipage?title=HowToUse
          * http://blog.drorhelper.com/2011/02/multiple-asserts-done-right.html
          * http://programmers.stackexchange.com/questions/7823/is-it-ok-to-have-multiple-asserts-in-a-single-unit-test
+         * http://blog.benhall.me.uk/2008/01/introduction-to-xunit-net-extensions/
          * 
          */
     }

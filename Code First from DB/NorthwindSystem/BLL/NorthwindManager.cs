@@ -24,11 +24,39 @@ namespace NorthwindSystem.BLL
             }
         }
 
+        public void UpdateShipper(Shipper info)
+        {
+            // NOTE: See question and commentary on http://stackoverflow.com/questions/15336248/entity-framework-5-updating-a-record
+            using (var context = new NWContext())
+            {
+                context.Shippers.Attach(info);
+                context.Entry(info).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+        }
+
+        public void DeleteShipper(Shipper info)
+        {
+            using (var context = new NWContext())
+            {
+                context.Shippers.Remove(context.Shippers.Find(info.ShipperID));
+                context.SaveChanges();
+            }
+        }
+
         public Shipper GetShipper(int shipperId)
         {
             using (var context = new NWContext())
             {
                 return context.Shippers.Find(shipperId);
+            }
+        }
+
+        public IList<Shipper> ListShippers()
+        {
+            using (var context = new NWContext())
+            {
+                return context.Shippers.ToList();
             }
         }
 
